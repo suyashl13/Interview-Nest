@@ -1,4 +1,4 @@
-# InterviewNest
+# Interview Nest
 
 InterviewNest is a comprehensive interview management platform designed for tech companies to streamline candidate submissions, schedule interviews, and conduct coding assessments. Built with **NestJS** and **Next.js**, it offers dedicated apps for HR, employees, and candidates.
 
