@@ -1,5 +1,5 @@
 {
-  "name": "Interview-Nest-App",
+  "name": "interview-nest",
   "private": true,
   "scripts": {
     "build": "turbo run build",
