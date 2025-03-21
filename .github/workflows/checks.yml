@@ -18,16 +18,14 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USER }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      - name: Install Docker and Docker Compose
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y docker.io
+      - name: Check Docker Version
+        run: docker --version
 
       - name: Lint
         run: docker compose run --rm app sh -c "npm run lint"
 
       - name: Build Docker Image
-        run: docker build -t suyeshlawand/interview-nest:tagname .
-
+        run: docker build -t suyeshlawand/interview-nest:${{ github.sha }} .
+      
       - name: Push Docker Image
-        run: docker push suyeshlawand/interview-nest:tagname
+        run: docker push suyeshlawand/interview-nest:${{ github.sha }}
