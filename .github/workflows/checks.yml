@@ -25,7 +25,7 @@ jobs:
         run: docker compose run --rm app sh -c "npm run lint"
 
       - name: Build Docker Image
-        run: docker build -t suyeshlawand/interview-nest:${{ github.sha }} .
+        run: docker build -t suyeshlawand/interview-nest:latest .
       
       - name: Push Docker Image
-        run: docker push suyeshlawand/interview-nest:${{ github.sha }}
+        run: docker push suyeshlawand/interview-nest:latest
